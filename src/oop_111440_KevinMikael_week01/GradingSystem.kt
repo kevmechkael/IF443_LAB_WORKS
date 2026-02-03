@@ -5,13 +5,7 @@ fun main (args: Array<String>){
     val pi= 3.14
     var area: Double = pi * radius * radius
     println("Radius : $radius, Area : $area")
-    checkSize(area)
+    println(checkSize(area))
 }
 
-fun checkSize(area: Double){
-    if (area > 100){
-        println("big circle")
-    } else {
-        println("small circle")
-    }
-}
+fun checkSize(area: Double) = if (area > 100) "big circle" else "small circle"
