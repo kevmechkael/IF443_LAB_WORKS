@@ -1,20 +1,17 @@
 package oop_111440_KevinMikael_week01
 
-fun main(){
-    val name: String = "John Thor"
-    val score: Int = 80
-    val grade = when (score) {
-        in 90 .. 100 -> "A"
-        in 80 .. 89 -> "B"
-        in 70 .. 79 -> "C"
-        else -> "D"
-    }
-    val studentID: String? = null
-    val idLength = studentID?.length ?: 0
-    println("panjang ID : $idLength")
-    println("nama = $name, score = $score")
-    println("Grade kamu = $grade")
-    println(calculateStatus(score))
+fun main (args: Array<String>){
+    var radius: Double = 7.0
+    var pi: Double = 3.14
+    var area: Double = pi * radius * radius
+    println("Radius : " + radius + ", Area:" + area)
+    checkSize(area)
 }
 
-fun calculateStatus(score: Int) = if (score > 75) "lulus" else "tidak lulus"
+fun checkSize(area: Double){
+    if (area > 100){
+        println("big circle")
+    } else {
+        println("small circle")
+    }
+}
