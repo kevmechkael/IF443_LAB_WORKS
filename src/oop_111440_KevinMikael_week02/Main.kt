@@ -6,7 +6,7 @@ fun main(){
     val scanner = Scanner(System.`in`)
     println("--- APLIKASI PMB UMN")
     print("masukan nama:")
-    val name = scanner.nextline()
+    val name = scanner.nextLine()
     print("masukan NIM (wajib 5 karakter):")
     val nim = scanner.next()
     scanner.nextLine()
@@ -14,5 +14,8 @@ fun main(){
         println("error")
     } else {
         print("masukan jurusan")
+        val major = scanner.nextLine()
+        val s1 = Student(name, nim, major)
+        println("status: pendaftaran selesai")
     }
 }
