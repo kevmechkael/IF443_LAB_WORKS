@@ -15,7 +15,7 @@ fun main(){
     } else {
         print("masukan jurusan")
         val major = scanner.nextLine()
-        val s1 = Student(name, nim, major)
+        Student(name, nim, major)
         println("status: pendaftaran selesai")
     }
 }
