@@ -20,3 +20,13 @@ class loan(
         println("buku = $bookTitle, peminjam = $borrower, denda = ${calculateFine()}")
     }
 }
+fun main(){
+    val scanner =  Scanner(System.`in`)
+    print("masukan buku pinjaman : ")
+    var bookTitle: String = scanner.nextLine()
+    print("masukan nama : ")
+    var nama: String = scanner.nextLine()
+    print("masukan durasi pinjaman : ")
+    var durasi: Int= scanner.nextInt()
+    loan(bookTitle,nama,durasi)
+}
