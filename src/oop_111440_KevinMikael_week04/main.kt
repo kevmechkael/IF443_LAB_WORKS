@@ -14,5 +14,10 @@ fun main(){
 //    eCar.openTrunk()
 //    eCar.accelerate()
 //    eCar.honk()
-
+    val manager = manager("andre", 500000)
+    manager.work()
+    println("bonus manager = " + manager.calculateBonus())
+    val developer = Developer("kevin", 500000, "kotlin")
+    developer.work()
+    println("bonus developer = " + developer.calculateBonus())
 }
