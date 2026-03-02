@@ -4,4 +4,7 @@ open class car(brand : String, val numberOfDoors: Int): Vehicle(brand) {
     fun openTrunk(){
         println("Trunk $brand with $numberOfDoors doors is opened")
     }
+    override fun honk(){
+        println("TIN TIN")
+    }
 }
