@@ -11,5 +11,6 @@ class Ewallet(accountName: String, var balance: Double):PaymentMethod(accountNam
     }
     fun topup(amount: Double) {
         balance += amount
+        println("sukses")
     }
 }
