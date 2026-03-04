@@ -9,7 +9,7 @@ fun main(){
         pegawai.bekerja()
         when(pegawai){
             is Dosen -> {
-                println("terdeteksi sebagai doesen (nidn: ${pegawai.nidn}")
+                println("terdeteksi sebagai doesen (nidn: ${pegawai.nidn})")
             }
             is admin -> {
                 println("terdeteksi sebagai admin")
