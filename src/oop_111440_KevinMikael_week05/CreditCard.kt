@@ -5,6 +5,7 @@ class CreditCard(accountName: String, var limit: Double, var usedAmount: Double 
         val checker = amount + usedAmount
         if ( checker <= limit ){
             usedAmount = checker
+            println("ok")
         }else{
             println("no way brokie")
         }

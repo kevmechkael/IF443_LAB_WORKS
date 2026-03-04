@@ -15,10 +15,16 @@ fun main(){
 //                println("terdeteksi sebagai admin")
 //            }
 //        }
-    val luasKotak = hitungLuas(28)
-    val luasPersegiPanjang = hitungLuas(50, 20)
-    val luasBulat = hitungLuas(50.1)
-    println(luasKotak)
-    println(luasPersegiPanjang)
-    println(luasBulat)
+//    val luasKotak = hitungLuas(28)
+//    val luasPersegiPanjang = hitungLuas(50, 20)
+//    val luasBulat = hitungLuas(50.1)
+//    println(luasKotak)
+//    println(luasPersegiPanjang)
+//    println(luasBulat)
+    val Ewallet = Ewallet("kevin", 50000.0)
+    val kredit = CreditCard("kevin", 100000.0)
+    val method: List<PaymentMethod> = listOf(Ewallet, kredit)
+    for (payment in method){
+        payment.processPayment(75000.0)
+    }
 }
