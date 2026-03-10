@@ -6,13 +6,16 @@ fun processCheckout(method: PaymentMethod, amount: Double){
 }
 
 fun main(){
-    val myWatch = Smartwatch()
-    myWatch.showTime()
-    val myPhone = SmartPhone()
-    myPhone.turnOn()
-    val pay1 = Gopay()
-    val pay2 = Credit()
-
-    processCheckout(pay1, 500000.0)
-    processCheckout(pay2, 500000.0)
+//    val myWatch = Smartwatch()
+//    myWatch.showTime()
+//    val myPhone = SmartPhone()
+//    myPhone.turnOn()
+//    val pay1 = Gopay()
+//    val pay2 = Credit()
+//
+//    processCheckout(pay1, 500000.0)
+//    processCheckout(pay2, 500000.0)
+    val lamp = SmartLamp("1", "Ruangtamu")
+    val speaker = SmartSpeaker("1", "Google Nest Dapur")
+    val CCTV = SmartCCTV("1", "Ezviz Garasi")
 }
