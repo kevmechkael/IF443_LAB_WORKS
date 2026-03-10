@@ -10,7 +10,7 @@ interface Switchable {
 }
 interface Recordable {
     fun startRecording()
-    fun stopRecording(){
+    fun stopRecording() {
         println("Recording stopped")
     }
 }
