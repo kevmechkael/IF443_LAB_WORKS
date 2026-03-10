@@ -12,6 +12,13 @@ class SmartHomeHub {
             }
         }
     }
+    fun turnONALLswitch(){
+        for (device in devices){
+            if (device is Switchable){
+                device.turnOn()
+            }
+        }
+    }
     fun activateSecurityMode(){
         for (device in devices){
             if(device is Recordable){
