@@ -32,4 +32,11 @@ fun main() {
         is ApiResponse.Loading -> "loading"
     }
     println(uiMessage)
+
+    GameManager.startgame()
+    GameManager.startgame()
+    println(ItemRarity.LEGENDARY.dropChance)
+    val weapon = Weapon.forgeStarterSword()
+    println(weapon.item)
+    println(weapon.durability)
 }
