@@ -29,5 +29,7 @@ fun main() {
     val uiMessage = when(response) {
         is ApiResponse.Success -> "tampilkan ${response.data}"
         is ApiResponse.error -> "munculkan alert ${response.message}"
+        is ApiResponse.Loading -> "loading"
     }
+    println(uiMessage)
 }
