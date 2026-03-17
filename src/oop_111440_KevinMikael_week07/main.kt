@@ -13,5 +13,11 @@ fun main() {
     val reg1 = RegularUser("Jack", 42)
     val reg2 = RegularUser("Jack", 42)
     println(reg1)
+    println(reg2)
     println("Sama?" + (reg1 == reg2))
+    val data1 = DataUser("Jack", 42)
+    val data2 = DataUser("Jack", 42)
+    println(data1)
+    println(data2)
+    println("Sama?" + (data1 == data2))
 }
