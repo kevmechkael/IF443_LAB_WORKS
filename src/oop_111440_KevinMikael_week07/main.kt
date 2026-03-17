@@ -39,4 +39,11 @@ fun main() {
     val weapon = Weapon.forgeStarterSword()
     println(weapon.item)
     println(weapon.durability)
+    val weaponNEW = weapon.item.copy(damage = 25)
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(weaponNEW))
+    processEvent(BattleState.GameOver("terkena jebakan racun"))
+
+
 }
