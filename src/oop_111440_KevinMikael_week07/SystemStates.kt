@@ -7,4 +7,5 @@ sealed class ApiResponse{
     data class Success(val data: String) : ApiResponse()
     data class error(val message: String) : ApiResponse()
     object Loading: ApiResponse()
+
 }
