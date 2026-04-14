@@ -46,4 +46,9 @@ fun main(){
     } catch ( e: IllegalArgumentException ){
         println(e.message)
     }
+    println("TESSTTTTTTTTTTTT JAVAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+    val javaResponse = LegacyJavaAPI.fetchServerStatus()
+    val statusLength = javaResponse!!.length
+    println("status dari java : $javaResponse length : $statusLength")
+
 }
