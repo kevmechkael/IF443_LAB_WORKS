@@ -2,7 +2,7 @@ package oop_111440_KevinMikael_week08
 
 object DatabaseMock{
     fun findUser(id: Int): UserProfile?{
-        return if (id == 1) UserProfile("testuser", "test@tes.comt") else null
+        return if (id == 1) UserProfile("Testuser", "test@tes.comt") else null
     }
 }
 
