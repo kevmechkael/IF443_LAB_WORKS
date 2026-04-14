@@ -20,4 +20,10 @@ fun main(){
         "Laptop",
         4500000.0
     )
+    for (item in mixed) {
+        val text = item as? String
+        text?.let{
+            println("ditemukan teks: ${it.uppercase()}")
+        }
+    }
 }
