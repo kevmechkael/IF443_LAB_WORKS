@@ -29,6 +29,4 @@ fun main(){
     inventory["Oranges"] = 5
     inventory["Apple"] = 5
     println(inventory)
-
-
 }
