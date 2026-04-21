@@ -15,4 +15,20 @@ fun main(){
     activeUsers.add("UserC")
     activeUsers.add("UserA")
     println(activeUsers)
+    println("===test map===")
+    val studentGrades = mapOf(
+        "alice" to "a",
+        "bob" to "b",
+        "carl" to "a",
+    )
+    println(studentGrades["carl"])
+    val inventory = mutableMapOf(
+        "Apples" to 3,
+        "bananas" to 5,
+    )
+    inventory["Oranges"] = 5
+    inventory["Apple"] = 5
+    println(inventory)
+
+
 }
