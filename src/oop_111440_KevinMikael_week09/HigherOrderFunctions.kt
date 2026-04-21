@@ -5,4 +5,9 @@ fun main(){
     println(numbers)
     val evens = numbers.filter { it % 2 == 0 }
     println(evens)
+    println("=== HOF : MAP ===")
+    val multiplied = evens.map { it + 10 }
+    val asStrings = multiplied.map{"rp ${it}"}
+    println(multiplied)
+    println(asStrings)
 }
