@@ -19,4 +19,5 @@ fun main(){
     topPerformersString.forEach{println(it)}
     worstPerformersString.forEach{println(it)}
     uniquePairs.forEach{println(it)}
+    println("================================")
 }
