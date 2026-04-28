@@ -9,4 +9,5 @@ fun main(){
     response.Data.forEach {
         println(it.name + it.Balance)
     }
+    val txRepo = WalletRepo<Transaction>()
 }
