@@ -10,4 +10,5 @@ fun main(){
     val itemPrice = PairBox("BitCoin",2000)
     println(itemPrice.value)
     println(itemPrice.key)
+
 }
