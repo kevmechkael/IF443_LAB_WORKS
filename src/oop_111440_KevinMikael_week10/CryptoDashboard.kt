@@ -10,4 +10,8 @@ fun main(){
         println(it.name + it.Balance)
     }
     val txRepo = WalletRepo<Transaction>()
+    txRepo.add(Transaction("transaction", 1.5))
+    txRepo.getAll().forEach {
+        println(it.id + it.amount)
+    }
 }
