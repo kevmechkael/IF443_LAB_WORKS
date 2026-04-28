@@ -10,5 +10,8 @@ fun main(){
     val itemPrice = PairBox("BitCoin",2000)
     println(itemPrice.value)
     println(itemPrice.key)
-
+    println("=== test generic functions===")
+    printData(3.14)
+    val result = processData("Stable Coin")
+    println(result)
 }
