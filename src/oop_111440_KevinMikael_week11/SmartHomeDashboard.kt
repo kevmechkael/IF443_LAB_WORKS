@@ -32,6 +32,10 @@ fun main(){
         this.forEach { println(it.diagnose()) }
         println(this.size)
     }
+    val totalPower = homeDevices.run {
+        sumOf{it.powerLoad}
+    }
+    println(totalPower)
 
 
 }
