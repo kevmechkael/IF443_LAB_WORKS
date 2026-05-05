@@ -29,7 +29,7 @@ fun main(){
         println(hasil)
     }
     val summary = with(homeDevices){
-        this.forEach { println(it.diagnose()) }
+        this.forEach { println(it) }
         println(this.size)
     }
     val totalPower = homeDevices.run {
@@ -37,5 +37,8 @@ fun main(){
     }
     println(totalPower)
 
+    val diagnose = homeDevices.run {
+        this.forEach { println(it.diagnose()) }
+    }
 
 }
