@@ -8,5 +8,12 @@ fun main(){
     }.also {
         homeDevices.add(it)
     }
+    SmartDevice("ezviz Outdoor", "Camera").apply {
+        isOnline = true
+        powerLoad = 5
+    }.also{
+        println("kamera ${it.name} terhubung")
+        homeDevices.add(it)
+    }
 
 }
