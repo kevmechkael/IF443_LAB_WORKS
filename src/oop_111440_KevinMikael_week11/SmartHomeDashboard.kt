@@ -15,5 +15,11 @@ fun main(){
         println("kamera ${it.name} terhubung")
         homeDevices.add(it)
     }
+    val acInverter = run{
+        val device = SmartDevice("Daikin inverter(Kabel 3X2.5)", "HVAC", false, 800)
+        device
+    }
+    homeDevices.add(acInverter)
+    homeDevices.add(SmartDevice("picolo's Auto Feeder", "pet care", true, 10))
 
 }
