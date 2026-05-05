@@ -1,5 +1,7 @@
 package oop_111440_KevinMikael_week11
 
+import jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyles
+
 fun main(){
     val homeDevices = mutableListOf<SmartDevice>()
     SmartDevice("Philip","lightning").apply{
@@ -26,5 +28,10 @@ fun main(){
         val hasil = it.diagnose()
         println(hasil)
     }
+    val summary = with(homeDevices){
+        this.forEach { println(it.diagnose()) }
+        println(this.size)
+    }
+
 
 }
