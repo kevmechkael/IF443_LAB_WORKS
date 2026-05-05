@@ -1,0 +1,8 @@
+package oop_111440_KevinMikael_week11
+
+fun String.addGreeting(): String {
+    return "Hello, $this"
+}
+fun String.repeatTimes(n : Int): String {
+    return this.repeat(n)
+}
