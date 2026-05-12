@@ -15,3 +15,17 @@ class BankAccount(private var balance: Double) {
         println("Berhasil tarik uang Rp$amount")
     }
 }
+fun main() {
+    val account = BankAccount(50000.0)
+    try {
+        account.withdraw(100000.0)
+        val result = 10 / 0
+        println(result)
+    } catch (e: InsufficientFundsException) {
+        println("Custom Error: ${e.message}")
+    } catch (e: ArithmeticException) {
+        println("Math Error: ${e.message}")
+    } catch (e: Exception) {
+        println("General Error: ${e.message}")
+    }
+}
