@@ -28,4 +28,10 @@ fun main() {
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
+    println("--- JADWAL MAKAN 2 ---")
+    currentKibbleStock = 1000
+
+    val feedingResult = runCatching {
+        dispenseKibble(30, currentKibbleStock, false)
+    }
 }
