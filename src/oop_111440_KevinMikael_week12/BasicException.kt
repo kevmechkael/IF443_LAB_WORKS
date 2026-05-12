@@ -9,4 +9,11 @@ fun main() {
     } finally {
         println("Program selesai.")
     }
+    val result = try {
+        100 / 5
+    } catch (e: ArithmeticException) {
+        0
+    }
+
+    println("Try expression result: $result")
 }
