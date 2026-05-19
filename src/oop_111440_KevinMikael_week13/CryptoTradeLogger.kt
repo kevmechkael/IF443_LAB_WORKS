@@ -1,7 +1,9 @@
 package oop_111440_KevinMikael_week13
 
+import java.io.File
+
 data class TradeRecord(val id: Int, val symbol: String, val type: String, val margin : Double, val pnl: Double)
-fun TradeRecord.toCsv(): String = "$id, $symbol, $type, $margin, $pnl"
+fun TradeRecord.toCsv(): String = "$id,$symbol,$type,$margin,$pnl"
 fun fromCsvtrade(line: String): TradeRecord? {
     val token = line.split(",")
     return try{
@@ -16,4 +18,7 @@ fun fromCsvtrade(line: String): TradeRecord? {
         println("Error parsing line: $line")
         null
     }
+}
+fun saveTrades(trades: List<TradeRecord>, path: String) {
+    File(path).printWriter().use { writer -> trades.forEach { writer.println(it.toCsv()) } }
 }
