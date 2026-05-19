@@ -13,6 +13,7 @@ fun fromCsvtrade(line: String): TradeRecord? {
             token[5].toDouble()
         )
     }catch (e: Exception){
+        println("Error parsing line: $line")
         null
     }
 }
