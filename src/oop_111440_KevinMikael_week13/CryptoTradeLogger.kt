@@ -25,3 +25,11 @@ fun saveTrades(trades: List<TradeRecord>, path: String) {
 fun loadTrades(path: String) : List<TradeRecord> {
     return File(path).readLines().mapNotNull { fromCsvtrade(it) }
 }
+
+fun main(){
+    val trades = listOf<TradeRecord>(
+        TradeRecord(20, "BTCUSDT", "Long", 32.0,30.0),
+        TradeRecord(20, "BTCUSDT", "Long", 32.0,30.0)
+    )
+    saveTrades(trades,"src/oop_111440_KevinMikael_week13/crypto_trades.csv")
+}
