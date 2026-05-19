@@ -33,4 +33,6 @@ fun main(){
     )
     saveTrades(trades,"src/oop_111440_KevinMikael_week13/crypto_trades.csv")
     File("src/oop_111440_KevinMikael_week13/crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
+    val loadeddata =loadTrades("src/oop_111440_KevinMikael_week13/crypto_trades.csv")
+    loadeddata.sumOf{it.pnl}
 }
