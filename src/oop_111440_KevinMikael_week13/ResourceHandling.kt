@@ -18,4 +18,10 @@ fun main(){
         }
     }
     println("100 log berhasil")
+    println("\n=== TEST BUFFERED READER ===")
+    safeFile.bufferedReader().use { reader ->
+        reader.lineSequence().take(5).forEach {
+            line -> println("steam read: $line")
+        }
+    }
 }
