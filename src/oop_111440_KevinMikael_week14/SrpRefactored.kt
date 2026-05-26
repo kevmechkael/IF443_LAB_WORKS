@@ -9,3 +9,8 @@ class userRepository{
         println("saving User : ${user.name} to database")
     }
 }
+class EmailService{
+    fun sendWelcome(user: User){
+        println("welcome email -> ${user.email}")
+    }
+}
