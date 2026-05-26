@@ -1,29 +1,51 @@
 package lecture_week14
 
 class proses_khs {
-    fun hitung(quiz: Double, aktivitas: Double): Double {
+    fun hitung_nilai_tugas(quiz: Double, aktivitas: Double): Double {
         return (quiz * 0.3) + (aktivitas * 0.7)
     }
 
-    fun nilaiAkhir(uts: Double, uas: Double, tugas: Double): Double {
-        return (uts * 0.3) + (uas * 0.4) + (tugas * 0.3)
-    }
-}
-class prosesDB{
-    fun simpanDB(nim: String, nama: String, nilai: Double):String{
-        return "$nim $nama $nilai"
-    }
-    fun loadDB(nim: String): String{
-        return "Berhasil load data : $nim"
+    fun hitung_nilai_akhir(utsMhs: Double, uasMhs: Double, tugas: Double, jenisKurikulum: jenis_kurikulum): Double {
+        return jenisKurikulum.hitung_nilai_bobot(utsMhs, uasMhs, tugas)
     }
 }
 
-fun main(){
-    val khs = proses_khs()
-    val db = prosesDB()
-    val nilaitugas = khs.hitung(80.0, 80.0)
-    val nilaiakhir = khs.nilaiAkhir(90.0, 80.0, nilaitugas)
-    val simpan = db.simpanDB("123","adam",nilaiakhir)
-    println(simpan)
-    println(db.loadDB("123"))
+interface jenis_kurikulum {
+    fun hitung_nilai_bobot(uts: Double, uas: Double, tugas: Double): Double {
+        return 1.0
+    }
+}
+
+class kurikulum_2013: jenis_kurikulum {
+    override fun hitung_nilai_bobot(uts: Double, uas: Double, tugas: Double): Double {
+        return (uts * 0.3) + (uas * 0.4) + (tugas * 0.3)
+    }
+}
+
+class kurikulum_merdeka: jenis_kurikulum {
+    override fun hitung_nilai_bobot(uts: Double, uas: Double, tugas: Double): Double {
+        return (uts * 0.2) + (uas * 0.3) + (tugas * 0.5)
+    }
+}
+
+class db_khs {
+    fun simpan_na_db(nim: String, nama: String, nilaiAkhir: Double): String {
+        return "KHS $nim nama $nama dapat nilai akhir: $nilaiAkhir"
+    }
+    fun load_db(nim: String): String {
+        return "Berhasil load data $nim"
+    }
+}
+
+fun main() {
+    val khsMhs = proses_khs()
+    val nilaiTugas = khsMhs.hitung_nilai_tugas(83.57, 96.45)
+    val naMhs1:Double = khsMhs.hitung_nilai_akhir(85.67, 70.40, nilaiTugas, kurikulum_merdeka())
+    val naMhs2:Double = khsMhs.hitung_nilai_akhir(85.67, 70.40, nilaiTugas, kurikulum_2013())
+
+    val dbMhs = db_khs()
+    val statSimpan1: String = dbMhs.simpan_na_db("123", "Titus", naMhs1);
+    val statSimpan2: String = dbMhs.simpan_na_db("321", "Ani", naMhs2);
+    println(statSimpan1)
+    println(statSimpan2)
 }
